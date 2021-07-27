@@ -30,5 +30,10 @@ int	main(void)
 	ft_strncpy(b, a, 5);
 	printf("%s\n", a);
 	printf("%s\n", b);
+
+	char	src[] = "Hello World!";
+	char	dest[15];
+	ft_strncpy(dest, src, 7);
+	printf("The string is: %s\n", dest);
 }
 */
