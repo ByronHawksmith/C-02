@@ -1,5 +1,7 @@
-/* If we were to get the lengths of both strings we could
- * prevent stack smashing by checking
+/* 
+ * If we were to get the lengths of both strings we could
+ * prevent stack smashing by checking and returning out
+ * early.
  */
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
