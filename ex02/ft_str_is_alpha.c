@@ -1,17 +1,17 @@
-int char_is_lower(char c)
+int	char_is_lower(char c)
 {
 	if (c >= 'a' && c <= 'z')
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
-int char_is_upper(char c)
+int	char_is_upper(char c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return 1;
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 int	ft_str_is_alpha(char *str)
@@ -28,6 +28,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -38,3 +39,4 @@ int	main(void)
 	printf("Hello1: %d\n", b);
 	printf("Hello0: %d\n", c);
 }
+*/
