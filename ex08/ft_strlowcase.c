@@ -21,15 +21,15 @@ char	*ft_strlowcase(char *str)
 #include <stdio.h>
 int	main(void)
 {
-	char a[6] = "Hello\0";
-	char b[7] = "Hello!\0";
-	char c[7] = "Hello0\0";
+	char a[] = "HELlO";
+	char b[] = "HELlO!";
+	char c[] = "HELlO0";
 
 	ft_strlowcase(a);
 	ft_strlowcase(b);
 	ft_strlowcase(c);
-	printf("Hello: %s\n", a);
-	printf("Hello1: %s\n", b);
-	printf("Hello0: %s\n", c);
+	printf("HELlO: %s\n", a);
+	printf("HELlO1: %s\n", b);
+	printf("HELlO0: %s\n", c);
 }
 */
