@@ -1,9 +1,6 @@
 int	char_is_printable(char c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	return (c >= 32 && c <= 126);
 }
 
 int	ft_str_is_printable(char *str)
