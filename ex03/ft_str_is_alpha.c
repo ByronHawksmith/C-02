@@ -1,6 +1,11 @@
-int	char_is_numeric(char c)
+int	char_is_lower(char c)
 {
-	return (c >= '0' && c <= '9');
+	return (c >= 'a' && c <= 'z');
+}
+
+int	char_is_upper(char c)
+{
+	return (c >= 'A' && c <= 'Z');
 }
 
 int	ft_str_is_alpha(char *str)
@@ -10,7 +15,7 @@ int	ft_str_is_alpha(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!char_is_numeric(str[i]))
+		if (!(char_is_upper(str[i]) || char_is_lower(str[i])))
 			return (0);
 		i++;
 	}
