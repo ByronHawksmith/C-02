@@ -14,13 +14,15 @@ char	*ft_strcpy(char *dest, char *src)
 
 /*
 #include <stdio.h>
-#include <unistd.h>
 int	main(void)
 {
-	char	*src = "Hello World!";
+	char	src[] = "Hello World!";
 	char	dest[15];
+	printf("Source before: %s\n", src);
+	printf("Destination before: %s\n", dest);
 	ft_strcpy(dest, src);
-	printf("The string is: %s\n", dest);
+	printf("Source after: %s\n", src);
+	printf("Destination after: %s\n", dest);
 
 	return (0);
 }
