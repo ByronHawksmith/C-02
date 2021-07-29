@@ -1,9 +1,6 @@
 int	char_is_numeric(char c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return (c >= '0' && c <= '9');
 }
 
 int	ft_str_is_alpha(char *str)
