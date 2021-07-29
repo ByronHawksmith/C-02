@@ -1,9 +1,6 @@
 int	char_is_lower(char c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	else
-		return (0);
+	return (c >= 'a' && c <= 'z');
 }
 
 char	*ft_strupcase(char *str)
