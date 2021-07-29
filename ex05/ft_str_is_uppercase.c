@@ -10,7 +10,7 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!char_is_lower(str[i]))
+		if (!char_is_upper(str[i]))
 			return (0);
 		i++;
 	}
@@ -21,11 +21,13 @@ int	ft_str_is_uppercase(char *str)
 #include <stdio.h>
 int	main(void)
 {
-	int a = ft_str_is_alpha("Hello");
-	int b = ft_str_is_alpha("Hello!");
-	int c = ft_str_is_alpha("Hello0");
-	printf("Hello: %d\n", a);
-	printf("Hello1: %d\n", b);
-	printf("Hello0: %d\n", c);
+	int a = ft_str_is_uppercase("hello");
+	int b = ft_str_is_uppercase("HELLO!");
+	int c = ft_str_is_uppercase("HELLO0");
+	int d = ft_str_is_uppercase("HELLO");
+	printf("hello: %d\n", a);
+	printf("HELLO!: %d\n", b);
+	printf("HELLO0: %d\n", c);
+	printf("HELLO: %d\n", d);
 }
 */
