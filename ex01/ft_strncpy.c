@@ -1,7 +1,7 @@
 /* 
- * If we were to get the lengths of both strings we could
- * prevent stack smashing by checking and returning out
- * early.
+ * If we were to get the length of the dest string
+ * we could prevent stack smashing by checking and 
+ * returning out early.
  */
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -25,17 +25,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 #include <stdio.h>
 int	main(void)
 {
-	char	*a;
+	char	a[] = "0123456789abcdefghij";
 	char	b[10];
 
-	a = "sdfgsdfgsdfgsdfgsfdg";
+	printf("Before a: %s\n", a);
+	printf("Before b: %s\n", b);
 	ft_strncpy(b, a, 5);
-	printf("%s\n", a);
-	printf("%s\n", b);
-
-	char	src[] = "Hello World!";
-	char	dest[15];
-	ft_strncpy(dest, src, 7);
-	printf("The string is: %s\n", dest);
+	printf("After a: %s\n", a);
+	printf("After b: %s\n", b);
 }
 */
