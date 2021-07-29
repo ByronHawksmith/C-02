@@ -21,9 +21,9 @@ char	*ft_strupcase(char *str)
 #include <stdio.h>
 int	main(void)
 {
-	char a[6] = "Hello\0";
-	char b[7] = "Hello!\0";
-	char c[7] = "Hello0\0";
+	char a[] = "Hello";
+	char b[] = "Hello!";
+	char c[] = "Hello0";
 
 	ft_strupcase(a);
 	ft_strupcase(b);
