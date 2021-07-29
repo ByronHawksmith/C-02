@@ -22,7 +22,7 @@ int	ft_str_is_printable(char *str)
 int	main(void)
 {
 	int a = ft_str_is_printable("Hello");
-	char chars[5] = {1, 40, 41, 42, 43};
+	char chars[6] = {1, 40, 41, 42, 43, 0};
 	int b = ft_str_is_printable(chars);
 
 	printf("Should be 1: %d\n", a);
