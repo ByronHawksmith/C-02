@@ -5,7 +5,7 @@ int	char_is_printable(char c)
 	return (c >= 32 && c <= 126);
 }
 
-void	dec_2_hex(char c)
+void	dec_2_hex(unsigned char c)
 {
 	char	*hex_symbs;
 
