@@ -8,17 +8,17 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		++i;
+	}
 	while (i < n)
 	{
-		*dest = *src;
-		if (!dest)
-			*dest = '\0';
-		dest++;
-		src++;
+		dest[i] = '\0';
 		i++;
 	}
-	*dest = '\0';
-	return (dest - n);
+	return (dest);
 }
 
 /*
