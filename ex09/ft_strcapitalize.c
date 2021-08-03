@@ -13,7 +13,7 @@ int	digit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int printable(char c)
+int	printable(char c)
 {
 	return (lower(c) || upper(c) || digit(c));
 }
