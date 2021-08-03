@@ -1,11 +1,11 @@
-int	lower(char c)
-{
-	return (c >= 'a' && c <= 'z');
-}
-
 int	upper(char c)
 {
 	return (c >= 'A' && c <= 'Z');
+}
+
+int	lower(char c)
+{
+	return (c >= 'a' && c <= 'z');
 }
 
 int	digit(char c)
@@ -15,7 +15,7 @@ int	digit(char c)
 
 int	upper_lower_digit(char c)
 {
-	return (lower(c) || upper(c) || digit(c));
+	return (upper(c) || lower(c) || digit(c));
 }
 
 char	*ft_strcapitalize(char *str)
