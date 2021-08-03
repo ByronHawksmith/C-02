@@ -13,11 +13,6 @@ int	digit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	upper_lower_digit(char c)
-{
-	return (upper(c) || lower(c) || digit(c));
-}
-
 char	*ft_strcapitalize(char *str)
 {
 	unsigned int	i;
@@ -27,12 +22,19 @@ char	*ft_strcapitalize(char *str)
 	upper_case_switch = 1;
 	while (str[i])
 	{
+		if (upper(str[i]))
+			str[i] += 32;
+		i++;
+	}
+	i = 0;
+	while (str[i])
+	{
 		if (upper_case_switch && lower(str[i]))
 		{
 			str[i] = str[i] - 32;
 		}
 		upper_case_switch = 0;
-		if (!upper_lower_digit(str[i]))
+		if (!(upper(str[i]) || lower(str[i]) || digit(str[i])))
 			upper_case_switch = 1;
 		i++;
 	}
@@ -43,7 +45,7 @@ char	*ft_strcapitalize(char *str)
 #include <stdio.h>
 int	main(void)
 {
-	char a[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	char a[] = "salut, coMment tU vas ? 42mots quaRante-deux; cinquante+et+un";
 
 	printf("Before: %s\n", a);
 	ft_strcapitalize(a);
