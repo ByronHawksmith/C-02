@@ -13,7 +13,7 @@ int	digit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	printable(char c)
+int	upper_lower_digit(char c)
 {
 	return (lower(c) || upper(c) || digit(c));
 }
@@ -32,7 +32,7 @@ char	*ft_strcapitalize(char *str)
 			str[i] = str[i] - 32;
 		}
 		upper_case_switch = 0;
-		if (!printable(str[i]))
+		if (!upper_lower_digit(str[i]))
 			upper_case_switch = 1;
 		i++;
 	}
